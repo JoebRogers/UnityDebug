@@ -3,37 +3,37 @@ using System.Diagnostics;
 
 public static class DebugUtility
 {
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void Assert(bool condition)
     {
         UnityEngine.Debug.Assert(condition);
     }
 
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void Assert(bool condition, Object context)
     {
         UnityEngine.Debug.Assert(condition, context);
     }
 
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void Assert(bool condition, object message)
     {
         UnityEngine.Debug.Assert(condition, message);
     }
 
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void Assert(bool condition, object message, Object context)
     {
         UnityEngine.Debug.Assert(condition, message, context);
     }
 
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void AssertFormat(bool condition, string format, params object[] args)
     {
         UnityEngine.Debug.AssertFormat(condition, format, args);
     }
 
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void AssertFormat(bool condition, Object context, string format, params object[] args)
     {
         UnityEngine.Debug.AssertFormat(condition, context, format, args);
@@ -75,25 +75,25 @@ public static class DebugUtility
         UnityEngine.Debug.Log(message, context);
     }
 
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void LogAssertion(object message)
     {
         UnityEngine.Debug.LogAssertion(message);
     }
 
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void LogAssertion(object message, Object context)
     {
         UnityEngine.Debug.LogAssertion(message, context);
     }
 
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void LogAssertionFormat(string format, params object[] args)
     {
         UnityEngine.Debug.LogAssertionFormat(format, args);
     }
 
-    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+    [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void LogAssertionFormat(Object context, string format, params object[] args)
     {
         UnityEngine.Debug.LogAssertionFormat(context, format, args);
