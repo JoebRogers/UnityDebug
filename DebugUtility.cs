@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Diagnostics;
 
-public static class DebugUtility
+public static class InternalDebug
 {
     [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
     public static void Assert(bool condition)
