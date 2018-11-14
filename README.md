@@ -20,4 +20,14 @@ Even for experienced developers, there's definite distinction between the debug 
 
 By utilising a script like this, it'll not only save you work by automatically stripping out internal debug calls, but it's also *explicit* about the intent of particular logs. Being able to immediately discern the intent of particular calls, especially in a team environment is a big aid in streamlining the shipping process.
 
+## Things to know
+
+There are two variants of this script you can use, one of which is the raw `.cs` file, which can be found in the `src` folder. The other, is a `.dll` file of the compiled script, which can be found in `bin`. The difference here, is that when using the raw script version, double-clicking on the logged message in the console window _won't_ jump you to the line referred to, but rather the debug script. Using the compiled `.dll` file circumvents this issue.
+
+Also, unlike the traditional Unity methods, there are also overloaded versions of all `Log` methods which take in a conditional argument (defaults to true). Allowing you to pass in your conditions, rather than wrapping your method calls - in turn, doing things this way also means that the condition itself is stripped from the build.
+
+## How do I use this?
+
+It's as simple as dropping either the script file or `.dll` into your project window and replacing any calls to `Debug.` (or `UnityEngine.Debug.`) with `InternalDebug.` (or `Utilities.InternaDebug.` if you don't include the namespace). The arguments have been left as-is, with any additions being made as overloads, so nothing should need to change about your current project set up at all.
+
 ## Enjoy!

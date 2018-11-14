@@ -66,111 +66,165 @@ namespace Utilities
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void Log(object message)
+        public static void Log(object message, bool condition = true)
         {
-            UnityEngine.Debug.Log(message);
+            if (condition)
+            {
+                UnityEngine.Debug.Log(message);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void Log(object message, Object context)
+        public static void Log(object message, Object context, bool condition = true)
         {
-            UnityEngine.Debug.Log(message, context);
+            if (condition)
+            {
+                UnityEngine.Debug.Log(message, context);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
-        public static void LogAssertion(object message)
+        public static void LogAssertion(object message, bool condition = true)
         {
-            UnityEngine.Debug.LogAssertion(message);
+            if (condition)
+            {
+                UnityEngine.Debug.LogAssertion(message);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
-        public static void LogAssertion(object message, Object context)
+        public static void LogAssertion(object message, Object context, bool condition = true)
         {
-            UnityEngine.Debug.LogAssertion(message, context);
+            if (condition)
+            {
+                UnityEngine.Debug.LogAssertion(message, context);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
-        public static void LogAssertionFormat(string format, params object[] args)
+        public static void LogAssertionFormat(string format, params object[] args, bool condition = true)
         {
-            UnityEngine.Debug.LogAssertionFormat(format, args);
+            if (condition)
+            {
+                UnityEngine.Debug.LogAssertionFormat(format, args);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
-        public static void LogAssertionFormat(Object context, string format, params object[] args)
+        public static void LogAssertionFormat(Object context, string format, params object[] args, bool condition = true)
         {
-            UnityEngine.Debug.LogAssertionFormat(context, format, args);
+            if (condition)
+            {
+                UnityEngine.Debug.LogAssertionFormat(context, format, args);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogError(object message)
+        public static void LogError(object message, bool condition = true)
         {
-            UnityEngine.Debug.LogError(message);
+            if (condition)
+            {
+                UnityEngine.Debug.LogError(message);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogError(object message, Object context)
+        public static void LogError(object message, Object context, bool condition = true)
         {
-            UnityEngine.Debug.LogError(message, context);
+            if (condition)
+            {
+                UnityEngine.Debug.LogError(message, context);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogErrorFormat(string format, params object[] args)
+        public static void LogErrorFormat(string format, params object[] args, bool condition = true)
         {
-            UnityEngine.Debug.LogErrorFormat(format, args);
+            if (condition)
+            {
+                UnityEngine.Debug.LogErrorFormat(format, args);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogErrorFormat(Object context, string format, params object[] args)
+        public static void LogErrorFormat(Object context, string format, params object[] args, bool condition = true)
         {
-            UnityEngine.Debug.LogErrorFormat(context, format, args);
+            if (condition)
+            {
+                UnityEngine.Debug.LogErrorFormat(context, format, args);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogException(System.Exception exception)
+        public static void LogException(System.Exception exception, bool condition = true)
         {
-            UnityEngine.Debug.LogException(exception);
+            if (condition)
+            {
+                UnityEngine.Debug.LogException(exception);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogException(System.Exception exception, Object context)
+        public static void LogException(System.Exception exception, Object context, bool condition = true)
         {
-            UnityEngine.Debug.LogException(exception, context);
+            if (condition)
+            {
+                UnityEngine.Debug.LogException(exception, context);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogFormat(string format, params object[] args)
+        public static void LogFormat(string format, params object[] args, bool condition = true)
         {
-            UnityEngine.Debug.LogFormat(format, args);
+            if (condition)
+            {
+                UnityEngine.Debug.LogFormat(format, args);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogFormat(Object context, string format, params object[] args)
+        public static void LogFormat(Object context, string format, params object[] args, bool condition = true)
         {
-            UnityEngine.Debug.LogFormat(context, format, args);
+            if (condition)
+            {
+                UnityEngine.Debug.LogFormat(context, format, args);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogWarning(object message)
+        public static void LogWarning(object message, bool condition = true)
         {
-            UnityEngine.Debug.LogWarning(message);
+            if (condition)
+            {
+                UnityEngine.Debug.LogWarning(message);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogWarning(object message, Object context)
+        public static void LogWarning(object message, Object context, bool condition = true)
         {
-            UnityEngine.Debug.LogWarning(message, context);
+            if (condition)
+            {
+                UnityEngine.Debug.LogWarning(message, context);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogWarningFormat(string format, params object[] args)
+        public static void LogWarningFormat(string format, params object[] args, bool condition = true)
         {
-            UnityEngine.Debug.LogWarningFormat(format, args);
+            if (condition)
+            {
+                UnityEngine.Debug.LogWarningFormat(format, args);
+            }
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogWarningFormat(Object context, string format, params object[] args)
+        public static void LogWarningFormat(Object context, string format, params object[] args, bool condition = true)
         {
-            UnityEngine.Debug.LogWarningFormat(context, format, args);
+            if (condition)
+            {
+                UnityEngine.Debug.LogWarningFormat(context, format, args);
+            }
         }
     }
 }
