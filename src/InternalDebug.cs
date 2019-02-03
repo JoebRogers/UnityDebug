@@ -2,7 +2,7 @@
 using System.Diagnostics;
 
 namespace Utilities
-{    
+{
     public static class InternalDebug
     {
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
@@ -102,7 +102,13 @@ namespace Utilities
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
-        public static void LogAssertionFormat(string format, params object[] args, bool condition = true)
+        public static void LogAssertionFormat(string format, params object[] args)
+        {
+            UnityEngine.Debug.LogAssertionFormat(format, args);
+        }
+
+        [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
+        public static void LogAssertionFormat(string format, bool condition = true, params object[] args)
         {
             if (condition)
             {
@@ -111,7 +117,13 @@ namespace Utilities
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
-        public static void LogAssertionFormat(Object context, string format, params object[] args, bool condition = true)
+        public static void LogAssertionFormat(Object context, string format, params object[] args)
+        {
+            UnityEngine.Debug.LogAssertionFormat(context, format, args);
+        }
+
+        [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR"), Conditional("UNITY_ASSERTIONS")]
+        public static void LogAssertionFormat(Object context, string format, bool condition = true, params object[] args)
         {
             if (condition)
             {
@@ -138,7 +150,13 @@ namespace Utilities
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogErrorFormat(string format, params object[] args, bool condition = true)
+        public static void LogErrorFormat(string format, params object[] args)
+        {
+            UnityEngine.Debug.LogErrorFormat(format, args);
+        }
+
+        [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+        public static void LogErrorFormat(string format, bool condition = true, params object[] args)
         {
             if (condition)
             {
@@ -147,7 +165,13 @@ namespace Utilities
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogErrorFormat(Object context, string format, params object[] args, bool condition = true)
+        public static void LogErrorFormat(Object context, string format, params object[] args)
+        {
+            UnityEngine.Debug.LogErrorFormat(context, format, args);
+        }
+
+        [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+        public static void LogErrorFormat(Object context, string format, bool condition = true, params object[] args)
         {
             if (condition)
             {
@@ -174,7 +198,13 @@ namespace Utilities
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogFormat(string format, params object[] args, bool condition = true)
+        public static void LogFormat(string format, params object[] args)
+        {
+            UnityEngine.Debug.LogFormat(format, args);
+        }
+
+        [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+        public static void LogFormat(string format, bool condition = true, params object[] args)
         {
             if (condition)
             {
@@ -183,7 +213,13 @@ namespace Utilities
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogFormat(Object context, string format, params object[] args, bool condition = true)
+        public static void LogFormat(Object context, string format, params object[] args)
+        {
+            UnityEngine.Debug.LogFormat(context, format, args);
+        }
+
+        [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+        public static void LogFormat(Object context, string format, bool condition = true, params object[] args)
         {
             if (condition)
             {
@@ -210,7 +246,13 @@ namespace Utilities
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogWarningFormat(string format, params object[] args, bool condition = true)
+        public static void LogWarningFormat(string format, params object[] args)
+        {
+            UnityEngine.Debug.LogWarningFormat(format, args);
+        }
+
+        [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+        public static void LogWarningFormat(string format, bool condition = true, params object[] args)
         {
             if (condition)
             {
@@ -219,7 +261,13 @@ namespace Utilities
         }
 
         [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
-        public static void LogWarningFormat(Object context, string format, params object[] args, bool condition = true)
+        public static void LogWarningFormat(Object context, string format, params object[] args)
+        {
+            UnityEngine.Debug.LogWarningFormat(context, format, args);
+        }
+
+        [Conditional("DEVELOPMENT_BUILD"), Conditional("UNITY_EDITOR")]
+        public static void LogWarningFormat(Object context, string format, bool condition = true, params object[] args)
         {
             if (condition)
             {
