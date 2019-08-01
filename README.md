@@ -28,6 +28,6 @@ Also, unlike the traditional Unity methods, there are also overloaded versions o
 
 ## How do I use this?
 
-It's as simple as dropping either the script file or `.dll` into your project window and replacing any calls to `Debug.` (or `UnityEngine.Debug.`) with `InternalDebug.` (or `Utilities.InternaDebug.` if you don't include the namespace). The arguments have been left as-is, with any additions being made as overloads, so nothing should need to change about your current project set up at all.
+It's as simple as dropping either the script file or `.dll` into your project window and replacing any calls to `Debug.` (or `UnityEngine.Debug.`) with `InternalDebug.` (or `Utilities.InternalDebug.` if you don't include the namespace). The arguments have been left as-is, with any additions being made as overloads, so nothing should need to change about your current project set up at all.
 
 ## Enjoy!
